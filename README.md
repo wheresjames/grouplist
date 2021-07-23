@@ -23,7 +23,7 @@ Groups list items using a compare function.
 ---------------------------------------------------------------------
 ## Install
 
-    $ pip3 install .
+    $ pip3 install grplist
 
 &nbsp;
 
