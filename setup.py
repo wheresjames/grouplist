@@ -16,7 +16,7 @@ def readConfig(fname):
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Read in the config
-cfg = readConfig(os.path.join(here, 'grouplist', 'PROJECT.txt'))
+cfg = readConfig(os.path.join(here, 'grplist', 'PROJECT.txt'))
 
 # Read in the README
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:

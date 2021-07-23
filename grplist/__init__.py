@@ -1,6 +1,6 @@
 
 import os
-from . grouplist import *
+from . grplist import *
 
 def loadConfig(fname):
     with open(fname) as f:

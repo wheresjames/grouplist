@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import grouplist as gl
+import grplist as gl
 import numpy as np
 
 try:

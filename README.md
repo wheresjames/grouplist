@@ -1,11 +1,11 @@
 
-# grouplist
+# grplist
 
 Groups list items using a compare function.
 
 ``` Python
 
-    groups = groupList([1, 3, 6, 10, 12, 14, 21, 35], lambda a, b: 3 >= abs(a-b), True)
+    groups = grplist([1, 3, 6, 10, 12, 14, 21, 35], lambda a, b: 3 >= abs(a-b), True)
 
     # groups => [[1, 3, 6], [10, 12, 14], [21], [35]]
 
@@ -33,7 +33,7 @@ Groups list items using a compare function.
 
 ``` Python
 
-    import grouplist as gl
+    import grplist as gl
     import numpy as np
 
     try:
@@ -68,11 +68,11 @@ Groups list items using a compare function.
                 return 3 >= abs(a-b)
 
             test_1.c = 0
-            m = gl.groupList(t, cmpVal, True)
+            m = gl.grplist(t, cmpVal, True)
             Log(test_1.c, " : ", t, " -> ", m)
 
             test_1.c = 0
-            m = gl.groupList2(t, cmpVal, True)
+            m = gl.grplist2(t, cmpVal, True)
             Log(test_1.c, " : ", t, " -> ", m)
 
     def test_2():
@@ -99,7 +99,7 @@ Groups list items using a compare function.
             return False
 
         t = ['on', 'tw', 'th', 'fo', 'fi', 'si', 'te', 'zk']
-        Log(t, " -> ", gl.groupList2(t, anyLetters, True))
+        Log(t, " -> ", gl.grplist2(t, anyLetters, True))
 
 
     # Group factors
@@ -108,7 +108,7 @@ Groups list items using a compare function.
         showBreak()
 
         t = [3, 4, 5, 6, 7, 8, 9, 10]
-        Log(t, " -> ", gl.groupList2(t, lambda a, b: not (a % b), True))
+        Log(t, " -> ", gl.grplist2(t, lambda a, b: not (a % b), True))
 
 
     # Group overlapping tracks
@@ -140,7 +140,7 @@ Groups list items using a compare function.
         print("\n--- INPUT ---")
         showTracks(t, 'beg', 'end')
 
-        g = gl.groupList2(t, lambda a, b: a['beg'] <= b['end'] and a['end'] >= b['beg'], True)
+        g = gl.grplist2(t, lambda a, b: a['beg'] <= b['end'] and a['end'] >= b['beg'], True)
 
         i = 0
         for t in g:
