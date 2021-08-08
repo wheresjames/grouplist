@@ -5,7 +5,7 @@ import numpy as np
 
 try:
     import sparen
-    Log = sparen.Log
+    Log = sparen.log
 except Exception as e:
     Log = print
 
